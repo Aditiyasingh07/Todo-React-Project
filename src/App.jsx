@@ -76,7 +76,7 @@ function App() {
         value={inputContent}
         onChange={(e) => setInputContent(e.target.value)}
       />
-      <button className=" text-white justify-center items-center gap-2 flex w-1/4 font-bold bg-slate-600 h-12 rounded-2xl" onClick={addTodo}>{editIndex !== null ? 'Edit' : 'Add'} 
+      <button className=" text-white justify-center items-center gap-2 flex w-1/4 font-bold bg-slate-600 h-12 rounded-2xl" onClick={addTodo}>{editIndex !== null ? 'Edit' : ''} 
       <img className=" rounded-xl" src="src\assets\icon\add.gif" alt="" width="40px" />
       </button>
       </form>
