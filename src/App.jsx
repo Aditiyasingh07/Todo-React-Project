@@ -81,9 +81,9 @@ function App() {
           <div className="">
           <div className="btn flex items-center justify-between px-5 py-1 bg-slate-500 w-96">
           <h2 className=" font-extrabold">Category: {category.name}</h2>
-          <div className="btn-item w-28 flex justify-around">
-          <button onClick={() => { setShowAddTodoForm(true); setSelectedCategoryIndex(categoryIndex); }}> <img src="./assets/add.png" alt="#add" width='20px' /></button>
-          <button onClick={() => removeCategory(categoryIndex)}> <img src=".\assets\remove.png" alt="#remove" width='25px' /></button>
+          <div className=" items-center btn-item w-32 flex justify-around">
+          <button className="addbtn" onClick={() => { setShowAddTodoForm(true); setSelectedCategoryIndex(categoryIndex); }}></button>
+          <button className="removebtn" onClick={() => removeCategory(categoryIndex)}></button>
           </div>
           </div>
           {showAddTodoForm && selectedCategoryIndex === categoryIndex && (
@@ -117,7 +117,7 @@ function App() {
                 <h3 className="font-bold">{todo.title}</h3>
                 <p className=" bg-white mb-4 border-b-2 w-full"></p>
                 <p>{todo.content}</p>
-                <button className="mt-4" onClick={() => removeTodo(categoryIndex, todoIndex)}> <img src="./assets/remove.png" alt="#remove" width="25px" /></button>
+                <button className="mt-4 todoremovebtn" onClick={() => removeTodo(categoryIndex, todoIndex)}></button>
               </li>
             ))}
           </ul>

@@ -17,16 +17,6 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.main-containern{
- background: url('src/assets/line ymmetry.png');
- height: 100vh;
- width: 100vw;
- background-position: center;
- background-size: cover;
- /* background-size: auto; */
- opacity: 0.8;
-}
-
 /* a {
   font-weight: 500;
   color: #646cff;

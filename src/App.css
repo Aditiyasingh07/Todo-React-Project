@@ -2,6 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
+.addbtn{
+  background-image: url("./assets/add.png");
+  background-size: cover;
+  width: 25px;
+  height:  25px;
+}
+.removebtn{
+  background-image: url("./assets/remove.png");
+  background-size: cover;
+  width: 30px;
+  height:  30px;
+}
+
+.todoremovebtn{
+  background-image: url("./assets/remove.png");
+  background-size: cover;
+  width: 25px;
+  height:  25px;
+}
 /* #root {
   max-width: 1280px;
   margin: 0 auto;
