@@ -2,11 +2,46 @@
 @tailwind components;
 @tailwind utilities;
 
+/* #root{
+  background-image: url("./assets/360/world.png");
+  height: 100vh;
+  width: 100vw;
+  background-position: center;
+  background-size: cover;
+} */
+
+.main{
+  position: absolute;
+  z-index: 100;
+  width: 100vw;
+  height: 100vh;
+}
+
+.optone{
+  position: absolute;
+  z-index: 50;
+  background-color: black;
+  height: 100vh;
+  width: 100vw;
+  opacity:  .4;
+}
+
+.opt{
+  position: absolute;
+  z-index: 0;
+  background: url('./assets/main-img.jpeg');
+  height: 100vh;
+  width: 100vw;
+  background-position: center;
+  background-size: auto;
+}
+
+
 .addbtn{
   background-image: url("./assets/add.png");
   background-size: cover;
-  width: 25px;
-  height:  25px;
+  width: 30px;
+  height:  30px;
 }
 .removebtn{
   background-image: url("./assets/remove.png");

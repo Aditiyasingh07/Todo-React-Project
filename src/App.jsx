@@ -61,29 +61,31 @@ function App() {
 
   return (
     <>
-    <div className="p-3">
+    <div className="opt"></div>
+    <div className="optone"></div>
+    <div className="p-3 main ">
       <h1 className="flex justify-center mt-5 text-3xl font-bold">Manage Your Tasks</h1>
       <div className="flex justify-center mt-7 items-center">
       <input
-        className="h-12 p-3 w-1/2 rounded-l-xl outline-none"
+        className="h-12 p-3 w-1/2 rounded-l-xl bg-[#353935] outline-none"
         type="text"
         placeholder="Category"
         value={inputCategory}
         onChange={(e) => setInputCategory(e.target.value)}
       />
       <button
-      className=" bg-black px-5 h-12 rounded-r-xl"
+      className=" bg-[#FFBC40] text-slate-900 font-extrabold px-5 h-12 rounded-r-xl"
       onClick={addCategory}>Add Category</button>
       </div>
       <div className=" p-5 flex flex-wrap justify-center mt-10 m-auto gap-5 rounded-xl">
       {categories.map((category, categoryIndex) => (
         <div key={categoryIndex} className=" flex justify-center items-center">
           <div className="">
-          <div className="btn flex items-center justify-between px-5 py-1 bg-slate-500 w-96">
+          <div className="btn flex items-center justify-between px-5 py-1 bg-slate-600 w-96">
           <h2 className=" font-extrabold">Category: {category.name}</h2>
           <div className=" items-center btn-item w-32 flex justify-around">
-          <button className="addbtn" onClick={() => { setShowAddTodoForm(true); setSelectedCategoryIndex(categoryIndex); }}></button>
-          <button className="removebtn" onClick={() => removeCategory(categoryIndex)}></button>
+          <button className=" bg-slate-100 rounded-md addbtn" onClick={() => { setShowAddTodoForm(true); setSelectedCategoryIndex(categoryIndex); }}></button>
+          <button className="removebtn bg-slate-100 rounded-md " onClick={() => removeCategory(categoryIndex)}></button>
           </div>
           </div>
           {showAddTodoForm && selectedCategoryIndex === categoryIndex && (
@@ -107,7 +109,9 @@ function App() {
           )}
           <ul className="flex flex-wrap bg-slate-800 p-5 rounded-b-2xl gap-5 justify-center w-96">
             {category.todos.map((todo, todoIndex) => (
-              <li className=" bg-black rounded-3xl px-10 py-5 flex flex-col items-center" key={todoIndex} style={{ textDecoration: todo.completed ? 'line-through' : 'none' }}>
+              <li className=" bg-[#6F8FAF] rounded-3xl px-10 py-5 flex flex-col items-center" key={todoIndex} style={{ textDecoration: todo.completed ? 'line-through' : 'none', background: todo.completed ? "#C0C0C0" : "#6F8FAF" ,
+              color : todo.completed ? "black" : "none"
+               }}>
                 <input
                   className="mb-4"
                   type="checkbox"
@@ -117,7 +121,7 @@ function App() {
                 <h3 className="font-bold">{todo.title}</h3>
                 <p className=" bg-white mb-4 border-b-2 w-full"></p>
                 <p>{todo.content}</p>
-                <button className="mt-4 todoremovebtn" onClick={() => removeTodo(categoryIndex, todoIndex)}></button>
+                <button className=" mt-4 todoremovebtn" onClick={() => removeTodo(categoryIndex, todoIndex)}></button>
               </li>
             ))}
           </ul>
